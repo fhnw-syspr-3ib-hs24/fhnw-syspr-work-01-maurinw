@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    // check each arg, except program name
+    
     for (int i = 1; i < argc; i++) {
         for (char *p = argv[i]; *p != '\0'; p++) {
             if (*p < 'a' || *p > 'z') {
@@ -10,9 +10,10 @@ int main(int argc, char *argv[]) {
             }
         }
     }
-    // print all args
+    
     for (int i = 0; i < argc; i++) {
-        printf("%d: %s\n", i, argv[i]);
+        printf("%s\n", argv[i]);
     }
+    
     return 0;
 }
